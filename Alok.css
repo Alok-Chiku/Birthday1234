@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #06031d;
+}
+.bday{
+margin-top: 0px;
+text-align: center;
+background: linear-gradient(180deg, #f80112 0%, #2602f5 110%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+cursor: pointer;
+font-size: 60px;
+font-family: bday;
+}
+.name{
+padding-right: 50px;
+margin-left: 200px;
+    margin-top: 2px;
+    text-align: center;
+    background: linear-gradient(160deg, #f80112 0%, #2602f5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    font-size: 120px;
+    font-family: bday;
+    display: inline-block;
+}
+.name:hover{
+-webkit-box-reflect: below -6px -webkit-gradient(linear, right top, right bottom, from(transparent),
+ color-stop(45%, transparent), to(rgba(40,89,89, 1))) ;
+}
+.wrapper{
+position: relative;
+width: 200px;
+margin: 100px auto;
+perspective: 600px;
+margin-bottom: 300px;
+}
+.img-area{
+position: absolute;
+width: 50%;
+height: 50%;
+transform-style: preserve-3d;
+transform: rotateY(-360deg) translateZ(-300px);
+animation: animate 25s steps(800, end) infinite;
+}
+.single-img{
+position: absolute;
+width: 250px;
+height: 150px;
+top: 1px;
+left: 5px;
+}
+.single-img img{
+width: 250px;
+height: 150px;
+border: 10px solid #fff;
+}
+.single-img.img-one{
+transform: rotateY(0deg) translateZ(300px);
+}
+.single-img.img-two{
+    transform: rotateY(60deg) translateZ(300px);
+    }
+.single-img.img-three{
+        transform: rotateY(120deg) translateZ(300px);
+        }
+.single-img.img-four{
+transform: rotateY(180deg) translateZ(300px);
+}
+.single-img.img-five{
+    transform: rotateY(240deg) translateZ(300px);
+    }
+.single-img.img-six{
+        transform: rotateY(300deg) translateZ(300px);
+        }
+img{
+filter: grayscale(0%);
+transition: 1s;
+cursor: pointer;
+}
+img:hover{
+transition: 1s;
+filter: grayscale(0%);
+}
+@keyframes animate{
+from{
+transform: rotateY(-360deg);
+}
+to{
+    transform: rotateY(0deg);
+}
+}
+@font-face{
+font-family: bday;
+src: url(bday.ttf);
+}
